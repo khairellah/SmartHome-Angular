@@ -1,0 +1,11 @@
+<div class="card m-3">
+    <img src="../../assets/Appareils/icon.png" class="card-img-top" alt="...">
+    <div class="card-body"  [ngClass]="{isOn: etat, isOff: !etat}">
+      <h5 class="card-title text-center">{{appareil.nom}}</h5>
+      <p class="card-text text-center">{{appareil.categorie}}</p>
+      <div class="text-center">
+        <button class="btn btn-success m-1"> ON</button>
+        <button class="btn btn-danger"> ON</button>
+      </div>
+    </div>
+  </div>
