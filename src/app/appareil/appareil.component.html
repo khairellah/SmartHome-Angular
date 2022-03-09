@@ -4,8 +4,8 @@
       <h5 class="card-title text-center">{{appareil.nom}}</h5>
       <p class="card-text text-center">{{appareil.categorie}}</p>
       <div class="text-center">
-        <button class="btn btn-success m-1"> ON</button>
-        <button class="btn btn-danger"> ON</button>
+        <button class="btn btn-success m-1" (click)="clickSwitch()"> ON</button>
+        <button class="btn btn-danger" (click)="clickSwitch()"> OFF</button>
       </div>
     </div>
   </div>
