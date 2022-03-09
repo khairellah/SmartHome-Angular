@@ -17,13 +17,13 @@ appareils: Appareil[] =
     id:2,
     nom: 'Four Bosh',
     categorie: 'FOUR',
-    etat:true
+    etat:false
   },
   {
     id:3,
     nom: 'Refrigerateur LG',
     categorie: 'REFRIG',
-    etat:false
+    etat:true
   },
   {
     id:4,

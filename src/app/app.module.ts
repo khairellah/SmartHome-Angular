@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AppareilComponent } from './appareil/appareil.component';
 import { AppareilListComponent } from './appareil-list/appareil-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+//MatSlideToggle
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import { AppareilListComponent } from './appareil-list/appareil-list.component';
     AppareilListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

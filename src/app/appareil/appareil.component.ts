@@ -10,10 +10,12 @@ import { Appareil } from '../models/appareil.model';
 export class AppareilComponent implements OnInit {
 @Input() appareil! :Appareil;
 etat!: boolean;
+checked! : boolean;
   constructor(private appareilServie : AppareilService) { }
 
   ngOnInit(): void {
     this.etat=this.appareil.etat;
+    this.etat === true ? this.checked = true : this.checked=false;
   }
 
   clickSwitch(){

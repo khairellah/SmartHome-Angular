@@ -3,13 +3,13 @@
 }
 
 .isOn {
-  background-color: rgba(lightgreen, 0.4);
-  color: darkgreen;
-  text-decoration: underline;
+  background-color: rgb(152, 238, 118);
+  /* color: green;
+  text-decoration: underline; */
 }
 
 .isOff {
-  background-color: rgba(rgb(201, 31, 25), 0.4);
-  color: rgb(100, 20, 0);
-  text-decoration: line-through;
+  background-color: rgb(221, 122, 122);
+  /*  color: red;
+  text-decoration: line-through; */
 }
