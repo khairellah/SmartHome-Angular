@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Appareil } from '../models/appareil.model';
-import { AppareilService } from '../appareil.service';
+import { Appareil } from '../appareil.model';
+import { AppareilService } from '../service/appareil.service';
 
 
 @Component({

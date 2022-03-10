@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppareilService } from '../appareil.service';
-import { Appareil } from '../models/appareil.model';
+import { AppareilService } from '../service/appareil.service';
+import { Appareil } from '../appareil.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'appareil',
@@ -10,7 +11,9 @@ import { Appareil } from '../models/appareil.model';
 export class AppareilComponent implements OnInit {
 @Input() appareil! :Appareil;
 //etat!: boolean;
-  constructor(private appareilServie : AppareilService) { }
+  constructor(
+    private appareilServie : AppareilService,
+    private router:Router) { }
 
   ngOnInit(): void {
     //this.etat=this.appareil.etat;
@@ -21,6 +24,10 @@ export class AppareilComponent implements OnInit {
     //this.etat = this.appareilServie.switchEtatAppareil(this.appareil.id , this.appareil.etat);
     this.appareil.etat=!this.appareil.etat;
 
+  }
+
+  goToEdit(id:number){
+  this.router.navigate(['appareil',id,'edit']);
   }
 
 }
