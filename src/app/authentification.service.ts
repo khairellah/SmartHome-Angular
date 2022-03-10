@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthentificationService {
-  isLogedIn:boolean = true;
+  isLogedIn:boolean = false;
   
 }

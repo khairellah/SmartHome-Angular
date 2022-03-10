@@ -10,7 +10,16 @@ export class AuthentificationGuard implements CanActivate {
 
   constructor(private authentificationService : AuthentificationService, private router : Router){}
 
-  canActivate(
+  canActivate():boolean {
+      if(!this.authentificationService.isLogedIn )
+      {
+        this.router.navigateByUrl('');
+      }
+      return this.authentificationService.isLogedIn;
+       
+  }
+
+  /* canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(this.authentificationService.isLogedIn !== true)
@@ -19,6 +28,6 @@ export class AuthentificationGuard implements CanActivate {
           this.router.navigate(['']);
         }
     return true;
-  }
+  }*/
   
 }
