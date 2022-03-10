@@ -7,6 +7,8 @@ import { AppareilComponent } from './appareil/appareil.component';
 import { AppareilListComponent } from './appareil-list/appareil-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthentificationService } from './authentification.service';
+import { AuthentificationGuard } from './authentification.guard';
 //MatSlideToggle
 
 @NgModule({
@@ -15,13 +17,13 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     AppareilComponent,
     AppareilListComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthentificationService,AuthentificationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

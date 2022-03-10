@@ -47,11 +47,11 @@ getAppareilById(apparielId: number): Appareil {
   }
 }
 
-switchEtatAppareil(apparielId: number, etat:boolean): boolean {
+/* switchEtatAppareil(apparielId: number, etat:boolean): boolean {
   const appareil = this.getAppareilById(apparielId);
   etat === true ? appareil.etat=false : appareil.etat=true;
   console.log(apparielId,etat);
   return appareil.etat;
-}
+} */
 
 }
