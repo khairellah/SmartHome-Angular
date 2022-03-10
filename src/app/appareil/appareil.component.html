@@ -1,16 +1,16 @@
-<div class="card m-3" [ngClass]="{isOn: etat, isOff: !etat}">
-    <img src="../../assets/Appareils/icon.png" class="card-img-top" alt="...">
+<div class="card m-3" [ngClass]="{isOn: appareil.etat, isOff: !appareil.etat}">
+    <img src="../../assets/Appareils/icon.png" class="card-img-top rounded-circle" alt="...">
     <div class="card-body"  >
       <h5 class="card-title text-center">{{appareil.nom}}</h5>
       <p class="card-text text-center">{{appareil.categorie}}</p>
-      <div class="text-center">
+      
         <!-- <button class="btn btn-success m-1" (click)="clickSwitch()"> ON</button>
         <button class="btn btn-danger" (click)="clickSwitch()"> OFF</button>
         <mat-slide-toggle>Slide me!</mat-slide-toggle> -->
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" (click)="clickSwitch()" [checked]="checked">
+        <div class="form-check form-switch text-center">
+          <input class="form-check-input fl-non" type="checkbox" id="flexSwitchCheckDefault" (click)="clickSwitch()" [checked]="appareil.etat">
           <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Switch</label> -->
-        </div>
+   
       </div>
     </div>
   </div>
